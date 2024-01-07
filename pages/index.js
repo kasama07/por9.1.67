@@ -89,7 +89,7 @@ export default function Home() {
       <div className={styles.roomcomponents}>
         <h1>Room components</h1>
 
-        {dors?.dormitory?.slice(20).map((d) =>
+        {dors?.dormitory?.map((d) =>
         <div key={d._id}>
         <div className={styles.roomBox}>
       

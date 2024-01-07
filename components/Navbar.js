@@ -56,6 +56,8 @@ export default function Navbar(){
                                 <a href="#">LOCATION</a>
                                 <a href="#">PRICE RANG</a>
                                 <a href="#">HELP</a>
+                                <a href="/create">create</a>
+                                <a href="/create/match">match</a>
                             </div>
                         </div>
                     <Link href="/addRoom" className={styles.menulist}><span >add Room</span></Link>
