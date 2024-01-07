@@ -1,16 +1,15 @@
 import mongoose , {Schema}  from "mongoose";
-
-
-const accountSchema = new Schema(
+const  matchSchema = new Schema(
     {
-        name:String,
-        dorm:String,
-        tell:String,
-        img:String,
-        gender:String,
-        detail:String
-    },
-    {timestamps:true,}
+        name: String,
+        dorm: String,
+        tel: String,
+        img: String,
+        gender: String,
+        detail: String
+    },{timestamps:true,}
 );
-const Acco =  mongoose.models.Acco || mongoose.model("Acco",accountSchema);
-export default Acco;
+
+const Account =  mongoose.models.Account || mongoose.model("Account",matchSchema);
+export default Account;
+

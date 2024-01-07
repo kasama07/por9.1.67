@@ -1,12 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
+
 import styles from '@/pages/create/match/math.module.css'
 import { useState,useEffect } from 'react';
 
 
-const getDors = async () => {
+const getAccount = async () => {
     try {
-        const res = await fetch("http://localhost:3000/api/getDors", {
+        const res = await fetch("http://localhost:3000/api/getMatch", {
           cache: "no-store",
         });
 
@@ -22,7 +21,7 @@ const getDors = async () => {
     }
 };
 export default function Home() {
-    const [dors, setDors] = useState(null);
+    const [data, setData] = useState(null);
     const [dormInput,setDormInput] = useState('');
     const handleInputChange = (event) => {
         setDormInput(event.target.value);
@@ -30,8 +29,8 @@ export default function Home() {
 
     
     useEffect(() => {
-      getDors().then((d) => {
-        setDors(d);
+      getAccount().then((d) => {
+        setData(d);
       });
     }, []);
 
@@ -45,33 +44,11 @@ export default function Home() {
                 value={dormInput}
                 onChange={handleInputChange}
             />
-
-            
-        
-            
-
-            {dors?.dormitory?.map((d) => 
-                d.dorm_name === dormInput && (
+            {data?.account?.map((d) => 
+                d.name === dormInput && (
                     <div key={d._id}>
-                    <div className={styles.roomBox}>
-                        <div className={styles.imgBox}>
-                            <img src={d.img} width={400} height={300} alt='img'></img>
-                        </div>
-                        <div className={styles.textBox}>
-                            <div className={styles.textBox1}>
-                                <div className={styles.dormNameBox}>
-                                    {d.dorm_name}
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.priceBox}>
-                            <div className={styles.price}>
-                                <span>detail:</span>{d.detail}
-                            </div>
-                        </div> 
-
+                    {d.name}
                     </div>
-                </div>
                 )
             )}
         </div>

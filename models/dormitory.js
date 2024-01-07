@@ -3,8 +3,8 @@ import mongoose , {Schema}  from "mongoose";
 
 const dormitorySchema = new Schema(
     {
-        type:String,
-        dorm_name:String,
+        type: String,
+        dorm_name: String,
         location:String,
         img:String,
         price:String,
