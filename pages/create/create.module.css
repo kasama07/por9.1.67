@@ -17,35 +17,20 @@
   }
 
 .form_box{
-    border-top-right-radius: 1.5rem;
-    border-top-left-radius:1.5rem ;
-    border-top:solid 25px #282828;
+    margin-top: 100px;
     display: grid;
     place-items: center;
-    width: 430px;
-    margin: 30px 0 20px 0 ;
+    grid-template-columns:  50% 50% ;
+    width: 1000px;
     box-shadow:  0 2px 10px gray;
     height: 400px;
 }
 .titleform{
+    text-align: center;
     font-size: 36px;
     font-weight: 500;
-    margin-top: 10px;
-}
-.input_box{padding-left: 10px;
-    font-size: 16px;
-    border:gray 1px solid;
-    height: 32px;
-    width: 300px;
-    border-radius: 0.4rem;
-}
-.input_detail{padding-left: 10px;
-    font-size: 16px;
-    border:gray 1px solid;
-    height: 45px;
-    width: 300px;
-
-
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 .send_btn{
     border: none;
@@ -55,4 +40,27 @@
     color: white;
     font-size:20px;
     background-color: #282828;
+    margin-top: 0px;
+}
+.textbox {
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 400px;
+    background-color: black;
+    color: white;
+    
+}
+.inputbox {
+    display: grid;
+    place-items: center;
+    width: 430px;
+    height: 400px;
+}
+.textboxone {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }

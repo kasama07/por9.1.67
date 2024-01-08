@@ -6,9 +6,9 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const client = await  clientPromise;
     const db =  client.db("information");
-    const {name} = req.body;
+    const {name,dorm,detail,img,gender} = req.body;
     const account= await db.collection("accounts").insertOne(
-      {name}
+      {name,dorm,detail,img,gender}
     )
     res.json(account);
   }

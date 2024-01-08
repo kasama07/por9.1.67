@@ -3,10 +3,10 @@ const  matchSchema = new Schema(
     {
         name: String,
         dorm: String,
-        tel: String,
+        detail: String,
         img: String,
-        gender: String,
-        detail: String
+        gender: String
+        
     },{timestamps:true,}
 );
 
